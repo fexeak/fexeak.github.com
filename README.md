@@ -1,4 +1,6 @@
-http://fexeak.github.com
-=================
+Visit http://github.com/wendal/gor
 
-Do it best
+## License
+
+Released under the [MIT License](http://www.opensource.org/licenses/MIT)
+
