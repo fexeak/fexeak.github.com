@@ -1,0 +1,16 @@
+title : Y's Blog
+tagline: Blog Tagline
+author :
+  name : Jacky Young
+  email : fexeak@163.com
+  github : fexeak
+  twitter : none
+  feedburner : none
+
+navigation :
+  - archive.html
+  - tags.html
+  - categories.html
+  - pages.html
+  - about.md
+  

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>修改gor的Markdown渲染方式</title>
+  
+    <meta name="author" content="Jacky Young">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" /> -->
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/blink_fx/stylesheets/normalize.css" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/blink_fx/stylesheets/nprogress.css" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/blink_fx/stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/blink_fx/stylesheets/font-awesome.css" type="text/css" rel="stylesheet" media="all">
+<script src="/assets/blink_fx/javascripts/click.js"></script>
+<script src="/assets/blink_fx/javascripts/jquery.min.js"></script>
+<script src="/assets/blink_fx/javascripts/jquery.fitvids.js"></script>
+<script src="/assets/blink_fx/javascripts/jquery.history.js"></script>
+<script src="/assets/blink_fx/javascripts/nprogress.js"></script>
+<script src="/assets/blink_fx/javascripts/scripts.js"></script>
+<link href="/assets/blink_fx/widgets/google_prettify/stylesheets/twitter-bootstrap.css" type="text/css" rel="stylesheet" media="all">
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+  <body>
+  <div id="wrapper">
+      <header class="site-header">
+      <div class="container">
+          <div class="site-title-wrapper">
+              <h1 class="site-title"><a class="js-ajax-link" href="/" title="Y&#39;s Blog">Y&#39;s Blog</a></h1>
+              <a class="button-square" href="/rss.xml"><i class="fa fa-rss"></i></a>
+          </div>
+          <ul class="site-nav">
+              
+              
+
+
+  <li><a href="/archive">Archive</a></li>
+
+
+              
+              
+
+
+  <li><a href="/tags">Tags</a></li>
+
+
+              
+              
+
+
+  <li><a href="/categories">Categories</a></li>
+
+
+              
+              
+
+
+  <li><a href="/pages">Pages</a></li>
+
+
+              
+              
+
+
+  <li><a href="/about">About</a></li>
+
+
+              
+          </ul>
+      </div>
+      </header>
+ <div id="ajax-container">
+     <div id="post-index" class="container">
+        <article class="post-container post">
+    <header class="post-header">
+    <h1 class="post-title">修改gor的Markdown渲染方式</h1>
+    <p class="post-date">
+        <time >2013-12-10</time>
+    </p>
+    </header>
+    <div class="post-content clearfix">
+    <p>　　<a href="https://github.com/wendal/gor" rel="nofollow">wendal的gor</a>在遇到code block的时候会不足, 把其markdown部分用官方Blackfriday替代后可以解决。</p>
+
+<hr/>
+
+<p><em>下面是对Markdown语法的一些测试:</em></p>
+
+<hr/>
+
+<h1>The largest heading</h1>
+
+<h2>The second largest heading</h2>
+
+<p>…</p>
+
+<h6>The 6th largest heading</h6>
+
+<blockquote>
+<p>Pardon my french</p>
+</blockquote>
+
+<p><em>This text will be italic</em></p>
+
+<p><strong>This text will be bold</strong></p>
+
+<p><strong>Everyone <em>must</em> attend the meeting at 5 o’click today.</strong></p>
+
+<ul>
+<li>Item</li>
+<li>Item</li>
+
+<li><p>Item</p></li>
+
+<li><p>Item</p></li>
+
+<li><p>Item</p></li>
+
+<li><p>Item</p></li>
+
+<li><p>Item 1</p></li>
+
+<li><p>Item 2</p></li>
+
+<li><p>Item 3</p></li>
+
+<li><p>Item 1</p>
+
+<ol>
+<li>A corollary to the above item.</li>
+<li>A corollary to the above item.</li>
+</ol></li>
+
+<li><p>Item 2</p>
+
+<ul>
+<li>A corollary to the above item.
+
+<ul>
+<li>A corollary to the above item.</li>
+<li>A corollary to the above item.</li>
+</ul></li>
+</ul></li>
+
+<li><p>Item 3</p></li>
+</ul>
+
+<p>Here’s an idea: why don’t we take <code>SuperiorProject</code> and turn it into <code>**Reasonable**Project</code>.</p>
+
+<p>Check out this neat program I wrote:</p>
+
+<pre><code>x = 0
+x = 2 + 2
+what is x
+</code></pre>
+
+<p>do_this_and_do_that_and_another_thing.</p>
+
+<p><a href="http://example.com" rel="nofollow">http://example.com</a></p>
+
+<p><del>Mistaken text.</del></p>
+
+<p>Here’s an example:</p>
+
+<pre><code>function test() {
+  console.log(&#34;notice the blank line before this function?&#34;);
+
+}
+</code></pre>
+
+<pre><code>require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&#34;Hello World!&#34;)
+puts markdown.to_html
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Help</td>
+<td><del>Display the</del> help window.</td>
+</tr>
+
+<tr>
+<td>Close</td>
+<td><em>Closes</em> a window</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th align="left">Left-Aligned</th>
+<th align="center">Center Aligned</th>
+<th align="right">Right Aligned</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">col 3 is</td>
+<td align="center">some wordy text</td>
+<td align="right">$1600</td>
+</tr>
+
+<tr>
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+
+<tr>
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+
+
+    </div>
+    <footer class="post-footer clearfix">
+            <!-- <p class="post-tags"><span>Tagged:</span> </p> -->
+            <div class="share">
+                   <a class="icon-twitter" href="http://twitter.com/share?text=修改gor的Markdown渲染方式&url=http://fexeak.github.io/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://fexeak.github.io/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=http://fexeak.github.io/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+               <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+            </div>
+        </footer>
+    
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- <div class="pagination"> -->
+<!--            -->
+<!--            -->
+<!--             <1!-- <a>&larr; Previous</a></li> --1> -->
+<!--            -->
+
+<!--            -->
+<!--            -->
+<!--             <1!-- <li class="next disabled"><a>Next &rarr;</a> --1> -->
+<!--            -->
+<!--     </div> -->
+
+</article>
+
+
+     </div>
+    </div>
+
+  </div>
+
+   
+ <footer class="footer">
+        <div class="container">
+            <div class="site-title-wrapper">
+                <h1 class="site-title"><a class="js-ajax-link" title="Y&#39;s Blog" href="http://fexeak.github.io">Y&#39;s Blog</a></h1>
+
+                <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
+            </div>
+
+            <p class="footer-copyright">&copy; Jacky Young 2013 / Published with <a href="http://github.com/wendal/gor">Gor</a> / <a href="https://github.com/zerob13/gor-theme-blink">gor-theme-blink </a> By <a href="http://zerob13.in">zerob13</a> Fork from <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a></p>
+        </div>
+    </footer>
+
+
+    </div> <!-- /container -->
+
+    
+<script src="//cdnjscn.b0.upaiyun.com/libs/prettify/r298/prettify.min.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-123-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
