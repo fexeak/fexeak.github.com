@@ -2,7 +2,13 @@
 <rss version="2.0">  <channel>
     <title>Y&#39;s Blog</title>
     <link>http://fexeak.github.io</link>
-    <pubDate>11 Dec 14 10:54 PST</pubDate>
+    <pubDate>12 Dec 14 08:30 PST</pubDate>
+    <item>
+      <title>SingletonFactory</title>
+      <link>http://fexeak.github.io/default/SingletonFactory/</link>
+      <pubDate>2014-05-12 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;　　转转看到个 &lt;em&gt;singletonFactory&lt;/em&gt; 的实现:&lt;/p&gt;&#xA;&#xA;&lt;pre&gt;&lt;code&gt;/**&#xA; * this class implements two patterns of Singleton and of Factory, the singleton&#xA; * factory allows to transform in singleton any other class, without changing&#xA; * it&amp;#39;s code.&#xA; * &#xA; * This version generates the singleton class in the moment the class is loaded.&#xA; * &#xA; * &#xA; * @author Giulio&#xA; */&#xA;public class SingletonFactory {&#xA; &#xA;    static private SingletonFactory singletonFactory = new SingletonFactory();&#xA; &#xA;    private AClass aClass=null;&#xA; &#xA;    // private constructor, we don&amp;#39;t want the class to be instantiated from&#xA;    // others.&#xA;    private SingletonFactory() {&#xA;&#x9;//does nothing&#xA;    }&#xA; &#xA;    public static SingletonFactory getSingletonFactory() {&#xA;&#x9;return singletonFactory;&#xA;    }&#xA; &#xA;    /**&#xA;     * returns the AClass object contained in the singleton, the object is created lazily&#xA;     *  &#xA;     * @return   the &amp;#34;singletonized&amp;#34; class&#xA;     */&#xA;    public AClass getAClass() {&#xA;&#x9;if (this.aClass == null){&#xA;                    synchronized ( this ) {&#xA;                       if ( this.aClass == null ) {&#xA;&#x9;          this.aClass = new AClass();&#xA;                       }&#xA;                    }&#xA;&#x9;}&#xA;&#x9;return this.aClass;&#xA;    }&#xA; &#xA; &#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;</description>
+    </item>
     <item>
       <title>修改gor的Markdown渲染方式</title>
       <link>http://fexeak.github.io/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/</link>

@@ -107,6 +107,63 @@
 
 
 <div class="post">
+  <h3 class="title"><a href="/default/SingletonFactory/">SingletonFactory</a> <span class="date">2014-05-12</span></h3>
+
+  <p>　　转转看到个 <em>singletonFactory</em> 的实现:</p>
+
+<pre><code>/**
+ * this class implements two patterns of Singleton and of Factory, the singleton
+ * factory allows to transform in singleton any other class, without changing
+ * it&#39;s code.
+ * 
+ * This version generates the singleton class in the moment the class is loaded.
+ * 
+ * 
+ * @author Giulio
+ */
+public class SingletonFactory {
+ 
+    static private SingletonFactory singletonFactory = new SingletonFactory();
+ 
+    private AClass aClass=null;
+ 
+    // private constructor, we don&#39;t want the class to be instantiated from
+    // others.
+    private SingletonFactory() {
+	//does nothing
+    }
+ 
+    public static SingletonFactory getSingletonFactory() {
+	return singletonFactory;
+    }
+ 
+    /**
+     * returns the AClass object contained in the singleton, the object is created lazily
+     *  
+     * @return   the &#34;singletonized&#34; class
+     */
+    public AClass getAClass() {
+	if (this.aClass == null){
+                    synchronized ( this ) {
+                       if ( this.aClass == null ) {
+	          this.aClass = new AClass();
+                       }
+                    }
+	}
+	return this.aClass;
+    }
+ 
+ 
+}
+</code></pre>
+
+
+  <div class="more">
+    <a href="/default/SingletonFactory/" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/">修改gor的Markdown渲染方式</a> <span class="date">2013-12-10</span></h3>
 
   <p>　　<a href="https://github.com/wendal/gor" rel="nofollow">wendal的gor</a>在遇到code block的时候会不足, 把其markdown部分用官方Blackfriday替代后可以解决。</p>
@@ -154,6 +211,63 @@
 
 <h2>最近更新</h2>
 
+
+<div class="post">
+  <h3 class="title"><a href="/default/SingletonFactory/">SingletonFactory</a> <span class="date">2014-05-12</span></h3>
+
+  <p>　　转转看到个 <em>singletonFactory</em> 的实现:</p>
+
+<pre><code>/**
+ * this class implements two patterns of Singleton and of Factory, the singleton
+ * factory allows to transform in singleton any other class, without changing
+ * it&#39;s code.
+ * 
+ * This version generates the singleton class in the moment the class is loaded.
+ * 
+ * 
+ * @author Giulio
+ */
+public class SingletonFactory {
+ 
+    static private SingletonFactory singletonFactory = new SingletonFactory();
+ 
+    private AClass aClass=null;
+ 
+    // private constructor, we don&#39;t want the class to be instantiated from
+    // others.
+    private SingletonFactory() {
+	//does nothing
+    }
+ 
+    public static SingletonFactory getSingletonFactory() {
+	return singletonFactory;
+    }
+ 
+    /**
+     * returns the AClass object contained in the singleton, the object is created lazily
+     *  
+     * @return   the &#34;singletonized&#34; class
+     */
+    public AClass getAClass() {
+	if (this.aClass == null){
+                    synchronized ( this ) {
+                       if ( this.aClass == null ) {
+	          this.aClass = new AClass();
+                       }
+                    }
+	}
+	return this.aClass;
+    }
+ 
+ 
+}
+</code></pre>
+
+
+  <div class="more">
+    <a href="/default/SingletonFactory/" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/default/%E4%BF%AE%E6%94%B9gor%E7%9A%84Markdown%E6%B8%B2%E6%9F%93%E6%96%B9%E5%BC%8F/">修改gor的Markdown渲染方式</a> <span class="date">2013-12-10</span></h3>
