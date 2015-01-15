@@ -4,8 +4,28 @@
 		<loc>http://fexeak.github.io/</loc>
 	</url>
 	<url>
+		<loc>http://fexeak.github.io/default/just-simpole-compare/</loc>
+		<lastmod>2015-01-15</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://fexeak.github.io/default/golang-knn/</loc>
+		<lastmod>2015-01-14</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://fexeak.github.io/default/DoorDroid-1/</loc>
+		<lastmod>2014-12-13</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
 		<loc>http://fexeak.github.io/default/SingletonFactory/</loc>
 		<lastmod>2014-05-12</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://fexeak.github.io/default/vim-map-localleader-vs-leader/</loc>
+		<lastmod>2014-02-13</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>

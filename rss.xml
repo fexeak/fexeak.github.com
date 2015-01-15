@@ -2,12 +2,36 @@
 <rss version="2.0">  <channel>
     <title>Y&#39;s Blog</title>
     <link>http://fexeak.github.io</link>
-    <pubDate>12 Dec 14 08:30 PST</pubDate>
+    <pubDate>15 Jan 15 11:28 PST</pubDate>
+    <item>
+      <title>just-simpole-compare</title>
+      <link>http://fexeak.github.io/default/just-simpole-compare/</link>
+      <pubDate>2015-01-15 12:00:00 +0800</pubDate>
+      <description>&lt;h2&gt;CPU: i5 2.6G Hz &lt;em&gt;10000 times looooooooop&lt;/em&gt;&lt;/h2&gt;&#xA;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;c:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;real    0m0.045s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.004s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.012s&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;go:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;&lt;em&gt;runtime&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;real    0m0.286s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.120s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.104s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;em&gt;compile&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;real    0m0.056s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.012s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.016s&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;python:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;real    0m0.106s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.016s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.024s&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;c#: mono&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;real    0m0.168s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.016s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.060s&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;java:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;real    0m0.431s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;user    0m0.340s&lt;/p&gt;&#xA;&#xA;&lt;p&gt;sys 0m0.180s&lt;/p&gt;&#xA;</description>
+    </item>
+    <item>
+      <title>golang-knn</title>
+      <link>http://fexeak.github.io/default/golang-knn/</link>
+      <pubDate>2015-01-14 12:00:00 +0800</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>DoorDroid-1</title>
+      <link>http://fexeak.github.io/default/DoorDroid-1/</link>
+      <pubDate>2014-12-13 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;　　对控件动态产生时的参数 &lt;em&gt;LayoutParams&lt;/em&gt; 进行设置时，注意一句话:&lt;/p&gt;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A widget must have the LayoutParams of its &lt;strong&gt;parent&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;　　所以设置的 &lt;em&gt;LayoutParams&lt;/em&gt; 应该是父类的 XXXParams.&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>SingletonFactory</title>
       <link>http://fexeak.github.io/default/SingletonFactory/</link>
       <pubDate>2014-05-12 12:00:00 +0800</pubDate>
       <description>&lt;p&gt;　　转转看到个 &lt;em&gt;singletonFactory&lt;/em&gt; 的实现:&lt;/p&gt;&#xA;&#xA;&lt;pre&gt;&lt;code&gt;/**&#xA; * this class implements two patterns of Singleton and of Factory, the singleton&#xA; * factory allows to transform in singleton any other class, without changing&#xA; * it&amp;#39;s code.&#xA; * &#xA; * This version generates the singleton class in the moment the class is loaded.&#xA; * &#xA; * &#xA; * @author Giulio&#xA; */&#xA;public class SingletonFactory {&#xA; &#xA;    static private SingletonFactory singletonFactory = new SingletonFactory();&#xA; &#xA;    private AClass aClass=null;&#xA; &#xA;    // private constructor, we don&amp;#39;t want the class to be instantiated from&#xA;    // others.&#xA;    private SingletonFactory() {&#xA;&#x9;//does nothing&#xA;    }&#xA; &#xA;    public static SingletonFactory getSingletonFactory() {&#xA;&#x9;return singletonFactory;&#xA;    }&#xA; &#xA;    /**&#xA;     * returns the AClass object contained in the singleton, the object is created lazily&#xA;     *  &#xA;     * @return   the &amp;#34;singletonized&amp;#34; class&#xA;     */&#xA;    public AClass getAClass() {&#xA;&#x9;if (this.aClass == null){&#xA;                    synchronized ( this ) {&#xA;                       if ( this.aClass == null ) {&#xA;&#x9;          this.aClass = new AClass();&#xA;                       }&#xA;                    }&#xA;&#x9;}&#xA;&#x9;return this.aClass;&#xA;    }&#xA; &#xA; &#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;</description>
+    </item>
+    <item>
+      <title>vim-map-localleader-vs-leader</title>
+      <link>http://fexeak.github.io/default/vim-map-localleader-vs-leader/</link>
+      <pubDate>2014-02-13 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;　　Vim 中 &lt;em&gt;localleader&lt;/em&gt; 和 &lt;em&gt;leader&lt;/em&gt; 不同之处在于:&lt;/p&gt;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;maplocalleader is shared between buffers but mapleader not.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;　　所以 &lt;em&gt;localleader&lt;/em&gt; 常常在插件中使用，这样在不同插件环境下有不同的 &lt;em&gt;localleader&lt;/em&gt; .&lt;/p&gt;&#xA;</description>
     </item>
     <item>
       <title>修改gor的Markdown渲染方式</title>
